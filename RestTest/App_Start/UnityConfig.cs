@@ -1,3 +1,4 @@
+using Backend.Common.AutoMapperCustomConfiguration;
 using Backend.Context;
 using Backend.Service;
 using Backend.Service.Contracts;
@@ -39,7 +40,13 @@ namespace RestTest
                 new InjectionFactory(c => HttpContext.Current != null ? HttpContext.Current.GetOwinContext() : new OwinContext())
             );
 
+
             //Servicios
+            //Utilidades
+            UnityConfig.container.RegisterType<IAutoMapperCustom, AutoMapperCustom>(
+               new PerRequestLifetimeManager()
+           );
+
 
             //Clientes
             UnityConfig.container.RegisterType<IGetClientesService, GetClientesService>(

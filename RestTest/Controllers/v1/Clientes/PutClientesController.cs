@@ -31,7 +31,7 @@ namespace RestTest.Controllers.v1
         /// Prueba de comuncacion
         /// </summary>
         /// <returns>OK</returns>
-        [Route("PruebaPut", Name = "PutPruebaV1")]
+        [Route("Actualiza", Name = "PutPruebaV1")]
         public bool GetPrueba()
         {
             return true;

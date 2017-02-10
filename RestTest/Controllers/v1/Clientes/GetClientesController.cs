@@ -26,22 +26,12 @@ namespace RestTest.Controllers.v1
             }
             _clientesService = clientesService;
         }
-
-        /// <summary>
-        /// Prueba de comuncacion
-        /// </summary>
-        /// <returns>OK</returns>
-        [Route("PruebaGet", Name = "GetPruebaV1")]
-        public bool GetPrueba()
-        {
-            return true;
-        }
-
+     
         /// <summary>
         /// Obtenemos todos los clientes
         /// </summary>
         /// <returns>Lista de clientes</returns>
-        [Route("Clientes", Name = "GetClientesV1")]
+        [Route("Todos", Name = "GetClientesV1")]
         public async Task<List<Cliente>> GetTodosClientes()
         {
             return await _clientesService.GetTodosClientes();

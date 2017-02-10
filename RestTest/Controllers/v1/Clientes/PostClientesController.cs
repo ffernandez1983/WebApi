@@ -28,22 +28,13 @@ namespace RestTest.Controllers.v1
             }
             _clientesService = clientesService;
         }
-
-        /// <summary>
-        /// Prueba de comuncacion
-        /// </summary>
-        /// <returns>OK</returns>
-        [Route("PruebaPost", Name = "PostPruebaV1")]
-        public bool GetPrueba()
-        {
-            return true;
-        }
+      
 
         /// <summary>
         /// Dar de alta un cliente
         /// </summary>
         /// <returns>OK, Conflict</returns>
-        [Route("PruebaPost", Name = "PostClienteV1")]
+        [Route("Nuevo", Name = "PostClienteV1")]
         public async Task<HttpResponseMessage> PostClienteAsync([FromBody] VMCliente newCliente)
         {
             Cliente oldCliente = new Cliente();

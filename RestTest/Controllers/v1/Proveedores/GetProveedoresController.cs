@@ -1,50 +1,37 @@
-﻿using Backend.Entities;
-using Backend.Entities.DatosCliente;
+﻿using Backend.Entities.DatosCliente;
+using Backend.Service;
 using Backend.Service.Contracts;
 using Backend.WebAPI.Common.Routing;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Net.Mail;
 using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace RestTest.Controllers.v1
 {
-    //[ApiVersion1RoutePrefix("Proveedores")]
-    //public class GetClientesController : ApiController
-    //{
-    //    private readonly IGetClientesService _clientesService = null;
+    [ApiVersion1RoutePrefix("Proveedores")]
+    public class GetProveedoresController : ApiController
+    {
+        private readonly IGetProveedoresService _proveedoresService = null;
 
-    //    public GetClientesController(IGetClientesService clientesService)
-    //    {
-    //        if(clientesService == null)
-    //        {
-    //            throw new ArgumentNullException("clientesService");
-    //        }
-    //        _clientesService = clientesService;
-    //    }
+        public GetProveedoresController(GetProveedoresService proveedoresService)
+        {
+            if (proveedoresService == null)
+            {
+                throw new ArgumentNullException("proveedoresService");
+            }
+            _proveedoresService = proveedoresService;
+        }
 
-    //    /// <summary>
-    //    /// Prueba de comuncacion
-    //    /// </summary>
-    //    /// <returns>OK</returns>
-    //    [Route("PruebaGet", Name = "GetPruebaV1")]
-    //    public bool GetPrueba()
-    //    {
-    //        return true;
-    //    }
+        /// <summary>
+        /// Obtenemos todos los proveedores
+        /// </summary>
+        /// <returns>Lista de clientes</returns>
+        [Route("Todos", Name = "GetProveedoresV1")]
+        public async Task<List<Proveedor>> GetTodosProveedores()
+        {
+            return await _proveedoresService.GetTodosProveedores();
+        }
 
-    //    /// <summary>
-    //    /// Obtenemos todos los clientes
-    //    /// </summary>
-    //    /// <returns>Lista de clientes</returns>
-    //    [Route("Clientes", Name = "GetClientesV1")]
-    //    public async Task<List<Cliente>> GetTodosClientes()
-    //    {
-    //        return await _clientesService.GetTodosClientes();
-    //    }
-
+    }
 }
