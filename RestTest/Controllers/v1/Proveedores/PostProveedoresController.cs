@@ -15,42 +15,32 @@ using System.Web.Http;
 
 namespace RestTest.Controllers.v1
 {
-    //[ApiVersion1RoutePrefix("Clientes")]
-    //public class PostClientesController : ApiController
-    //{
-    //    private readonly IPostClientesService _clientesService = null;
+    [ApiVersion1RoutePrefix("Proveedores")]
+    public class PostProveedoresController : ApiController
+    {
+        private readonly IPostProveedoresService _proveedoresService = null;
 
-    //    public PostClientesController(IPostClientesService clientesService)
-    //    {
-    //        if(clientesService == null)
-    //        {
-    //            throw new ArgumentNullException("clientesService");
-    //        }
-    //        _clientesService = clientesService;
-    //    }
+        public PostProveedoresController(IPostProveedoresService proveedoresService)
+        {
+            if (proveedoresService == null)
+            {
+                throw new ArgumentNullException("clientesService");
+            }
+            _proveedoresService = proveedoresService;
+        }
 
-    //    /// <summary>
-    //    /// Prueba de comuncacion
-    //    /// </summary>
-    //    /// <returns>OK</returns>
-    //    [Route("PruebaPost", Name = "PostPruebaV1")]
-    //    public bool GetPrueba()
-    //    {
-    //        return true;
-    //    }
+        /// <summary>
+        /// Dar de alta un proveedor
+        /// </summary>
+        /// <returns>OK, Conflict</returns>
+        [Route("Nuevo", Name = "PostProveedorV1")]
+        public async Task<HttpResponseMessage> PostProveedorAsync([FromBody] VMProveedor newProveedor)
+        {
+            Proveedor oldProveedor = new Proveedor();
+            oldProveedor.Nombre = newProveedor.Nombre;
 
-    //    /// <summary>
-    //    /// Dar de alta un cliente
-    //    /// </summary>
-    //    /// <returns>OK, Conflict</returns>
-    //    [Route("PruebaPost", Name = "PostClienteV1")]
-    //    public async Task<HttpResponseMessage> PostClienteAsync([FromBody] VMCliente newCliente)
-    //    {
-    //        Cliente oldCliente = new Cliente();
-    //        oldCliente.Nombre = newCliente.Nombre;
-
-    //        HttpResponse<Cliente> status = await _clientesService.PostClienteAsync(oldCliente);
-    //        return Request.CreateResponse(status.Status, status.Entity);
-    //    }
-
+            HttpResponse<Proveedor> status = await _proveedoresService.PostProveedorAsync(oldProveedor);
+            return Request.CreateResponse(status.Status, status.Entity);
+        }
+    }
 }

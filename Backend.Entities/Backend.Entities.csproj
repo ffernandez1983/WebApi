@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Documentos\Albaranes\Albaran.cs" />
     <Compile Include="Documentos\Albaranes\LineaAlbaran.cs" />
+    <Compile Include="Documentos\Facturacion\ViewModels\VMFactura.cs" />
     <Compile Include="Terceros\DatosCliente\Cliente.cs" />
     <Compile Include="Terceros\DatosCliente\ViewModels\VMCliente.cs" />
     <Compile Include="Terceros\DatosProveedor\Proveedor.cs" />
@@ -53,7 +54,7 @@
     <Compile Include="Documentos\Presupuestos\LineaPresupuesto.cs" />
     <Compile Include="Documentos\Presupuestos\Presupuesto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Terceros\DatosProveedor\ViewModels\VMFactura.cs" />
+    <Compile Include="Terceros\DatosProveedor\ViewModels\VMProveedor.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

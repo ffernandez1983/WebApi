@@ -40,12 +40,34 @@ namespace RestTest
             );
 
             //Servicios
+
+            //Clientes
             UnityConfig.container.RegisterType<IGetClientesService, GetClientesService>(
                 new PerRequestLifetimeManager()
             );
+            
             UnityConfig.container.RegisterType<IPostClientesService, PostClientesService>(
                new PerRequestLifetimeManager()
             );
+
+            UnityConfig.container.RegisterType<IPutClientesService, PutClientesService>(
+              new PerRequestLifetimeManager()
+           );
+
+            //Proveedores
+            UnityConfig.container.RegisterType<IGetProveedoresService, GetProveedoresService>(
+               new PerRequestLifetimeManager()
+           );
+
+            UnityConfig.container.RegisterType<IPostProveedoresService, PostProveedoresService>(
+               new PerRequestLifetimeManager()
+            );
+
+            UnityConfig.container.RegisterType<IPutProveedoresService, PutProveedoresService>(
+              new PerRequestLifetimeManager()
+           );
+
+            //Facturas
 
             UnityConfig.container.RegisterType<IPostFacturasService, PostFacturasService>(
                new PerRequestLifetimeManager()
