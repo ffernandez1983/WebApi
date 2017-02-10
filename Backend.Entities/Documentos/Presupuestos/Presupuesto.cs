@@ -29,11 +29,10 @@ namespace Backend.Entities.Facturacion
 
         [ForeignKey("Proveedor")]
         public int ProveedorId { get; set; }
-        public Proveedor Proveedor { get; set; }
+        public Proveedor Proveedor { get; set; }        
 
         //Importes
         public decimal ImporteSubtotal { get; set; }
-
         public decimal Impuesto { get; set; }
 
 

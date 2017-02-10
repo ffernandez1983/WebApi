@@ -16,5 +16,8 @@ namespace Backend.Entities.DatosCliente
         public string Apellido2 { get; set; }
 
         public virtual ICollection<Factura> Facturas { get; set; }
+        public virtual ICollection<Presupuesto> Presupuestos { get; set; }
+        public virtual ICollection<Pedido> Pedidos { get; set; }
+        public virtual ICollection<Albaran> Albaranes { get; set; }
     }
 }

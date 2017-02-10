@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend.Entities.Productos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -24,5 +25,10 @@ namespace Backend.Entities.Facturacion
 
         public decimal ImporteSubtotal { get; set; }
         public Presupuesto Presupuesto { get; set; }
+
+        //Productos
+        [ForeignKey("Producto")]
+        public int ProductoId { get; set; }
+        public Producto Producto { get; set; }
     }
 }

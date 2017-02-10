@@ -1,5 +1,6 @@
 ﻿using Backend.Entities.DatosCliente;
 using Backend.Entities.Facturacion;
+using Backend.Entities.Productos;
 using System.Data.Entity;
 using System.Threading.Tasks;
 
@@ -9,6 +10,8 @@ namespace Backend.Context
     {
         IDbSet<Cliente> Clientes { get; set; }
         IDbSet<Proveedor> Proveedores { get; set; }
+
+        IDbSet<Producto> Productos { get; set; }
 
         IDbSet<Factura> Facturas { get; set; }
         IDbSet<LineaFactura> LineasFactura { get; set; }

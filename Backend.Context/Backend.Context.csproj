@@ -57,6 +57,10 @@
     <Compile Include="Migrations\201702100726037_test.Designer.cs">
       <DependentUpon>201702100726037_test.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702101347554_Productos.cs" />
+    <Compile Include="Migrations\201702101347554_Productos.Designer.cs">
+      <DependentUpon>201702101347554_Productos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,6 +82,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201702100726037_test.resx">
       <DependentUpon>201702100726037_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702101347554_Productos.resx">
+      <DependentUpon>201702101347554_Productos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
