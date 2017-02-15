@@ -31,5 +31,16 @@ namespace Backend.Service
             return response;
 
         }
+
+        public async Task<HttpResponse<LineaFactura>> PostLineaFacturaAsync(LineaFactura lineafactura)
+        {
+
+            ctx.LineasFactura.Add(lineafactura);
+            await ctx.SaveChangesAsync();
+
+            var response = new HttpResponse<LineaFactura> { Status = HttpStatusCode.Created, Entity = lineafactura };
+            return response;
+
+        }
     }
 }

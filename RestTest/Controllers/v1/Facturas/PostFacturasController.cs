@@ -38,7 +38,7 @@ namespace RestTest.Controllers.v1
         /// </summary>
         /// <returns>OK, Conflict</returns>
         [Route("Nueva", Name = "PostFacturaV1")]
-        public async Task<HttpResponseMessage> PostClienteAsync([FromBody] VMFactura newFactura)
+        public async Task<HttpResponseMessage> PostFacturaAsync([FromBody] VMFactura newFactura)
         {
             _autoMapperCustom.InicilizarMapper();
             var factura = new Factura();
@@ -49,8 +49,24 @@ namespace RestTest.Controllers.v1
             return Request.CreateResponse(status.Status, status.Entity);
         }
 
-        
+        /// <summary>
+        /// Dar de alta una Linea de Factura
+        /// </summary>
+        /// <returns>OK, Conflict</returns>
+        [Route("NuevaLinea", Name = "PostLineaFacturaV1")]
+        public async Task<HttpResponseMessage> PostLineaFacturaAsync([FromBody] VMLineaFactura newLineaFactura)
+        {
+            _autoMapperCustom.InicilizarMapper();
+            var factura = new Factura();
 
-       
+            var copiaLineaFactura = Mapper.Map<VMLineaFactura, LineaFactura>(newLineaFactura);
+
+            HttpResponse<LineaFactura> status = await _facturasService.PostLineaFacturaAsync(copiaLineaFactura);
+            return Request.CreateResponse(status.Status, status.Entity);
+        }
+
+
+
+
     }
 }

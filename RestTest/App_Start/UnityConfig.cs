@@ -84,6 +84,11 @@ namespace RestTest
             );
 
 
+            //Productos
+            UnityConfig.container.RegisterType<IPostProductosService, PostProductosService>(
+             new PerRequestLifetimeManager()
+             );
+
 
         }
         /// <summary>

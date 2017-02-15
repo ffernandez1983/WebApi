@@ -13,7 +13,7 @@ namespace Backend.Entities.Productos
         
         public string Descripcion { get; set; }
 
-        public string Precio { get; set; }
+        public decimal Precio { get; set; }
        
         public virtual ICollection<LineaPresupuesto> LineasPresupuesto { get; set; }
         public virtual ICollection<LineaPedido> LineasPedido { get; set; }

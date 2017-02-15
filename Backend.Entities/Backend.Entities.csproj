@@ -44,6 +44,7 @@
     <Compile Include="Documentos\Albaranes\Albaran.cs" />
     <Compile Include="Documentos\Albaranes\LineaAlbaran.cs" />
     <Compile Include="Documentos\Facturacion\ViewModels\VMFactura.cs" />
+    <Compile Include="Documentos\Facturacion\ViewModels\VMLineaFactura.cs" />
     <Compile Include="Producto\Producto.cs" />
     <Compile Include="Producto\ViewModels\VMProducto.cs" />
     <Compile Include="Terceros\DatosCliente\Cliente.cs" />

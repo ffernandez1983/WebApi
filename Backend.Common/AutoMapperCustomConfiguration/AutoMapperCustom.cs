@@ -15,12 +15,14 @@ namespace Backend.Common.AutoMapperCustomConfiguration
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Factura, VMFactura>();
+                cfg.CreateMap<LineaFactura, VMLineaFactura>();
             });
 
             Mapper.Initialize(cfg =>
             {
                 cfg.CreateMissingTypeMaps = true;
                 cfg.CreateMap<Factura, VMFactura>();
+                cfg.CreateMap<LineaFactura, VMLineaFactura>();
             });
 
             IMapper mapper = config.CreateMapper();
