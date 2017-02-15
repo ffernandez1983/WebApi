@@ -61,6 +61,10 @@
     <Compile Include="Migrations\201702101347554_Productos.Designer.cs">
       <DependentUpon>201702101347554_Productos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201702151305223_Producto.cs" />
+    <Compile Include="Migrations\201702151305223_Producto.Designer.cs">
+      <DependentUpon>201702151305223_Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201702101347554_Productos.resx">
       <DependentUpon>201702101347554_Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201702151305223_Producto.resx">
+      <DependentUpon>201702151305223_Producto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
