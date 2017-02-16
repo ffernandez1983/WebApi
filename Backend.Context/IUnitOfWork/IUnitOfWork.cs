@@ -8,6 +8,8 @@ namespace Backend.Context
 {
     public interface IUnitOfWork
     {
+        IDbSet<Empresa> Empresas { get; set; }
+
         IDbSet<Cliente> Clientes { get; set; }
         IDbSet<Proveedor> Proveedores { get; set; }
 

@@ -260,6 +260,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\v1\Albaranes\GetAlbaranesController.cs" />
+    <Compile Include="Controllers\v1\Albaranes\PostAlbaranesController.cs" />
     <Compile Include="Controllers\v1\Clientes\GetClientesController.cs" />
     <Compile Include="Controllers\v1\Clientes\PostClientesController.cs" />
     <Compile Include="Controllers\v1\Clientes\PutClientesController.cs" />

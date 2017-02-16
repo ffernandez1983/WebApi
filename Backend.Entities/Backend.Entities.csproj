@@ -43,14 +43,17 @@
   <ItemGroup>
     <Compile Include="Documentos\Albaranes\Albaran.cs" />
     <Compile Include="Documentos\Albaranes\LineaAlbaran.cs" />
+    <Compile Include="Documentos\Albaranes\ViewModels\VMAlbaran.cs" />
+    <Compile Include="Documentos\Albaranes\ViewModels\VMLineaAlbaran.cs" />
     <Compile Include="Documentos\Facturacion\ViewModels\VMFactura.cs" />
     <Compile Include="Documentos\Facturacion\ViewModels\VMLineaFactura.cs" />
     <Compile Include="Documentos\Pedidos\ViewModels\VMLineaPedido.cs" />
     <Compile Include="Documentos\Pedidos\ViewModels\VMPedido.cs" />
     <Compile Include="Documentos\Presupuestos\ViewModels\VMLineaPresupuesto.cs" />
     <Compile Include="Documentos\Presupuestos\ViewModels\VMPresupuesto.cs" />
-    <Compile Include="Producto\Producto.cs" />
-    <Compile Include="Producto\ViewModels\VMProducto.cs" />
+    <Compile Include="Empresa\Empresa.cs" />
+    <Compile Include="Productos\Producto.cs" />
+    <Compile Include="Productos\ViewModels\VMProducto.cs" />
     <Compile Include="Terceros\DatosCliente\Cliente.cs" />
     <Compile Include="Terceros\DatosCliente\ViewModels\VMCliente.cs" />
     <Compile Include="Terceros\DatosProveedor\Proveedor.cs" />

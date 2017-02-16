@@ -2,10 +2,10 @@
 
 namespace RestTest.Controllers.v1
 {
-
-    public class VMPedido
+    public class VMAlbaran
     {
-        public int NumeroPedido { get; set; }
+
+        public int NumeroAlbaran { get; set; }
 
         public DateTime Fecha { get; set; }
 
@@ -18,5 +18,6 @@ namespace RestTest.Controllers.v1
         public decimal ImporteSubtotal { get; set; }
 
         public decimal Impuesto { get; set; }
+
     }
 }

@@ -18,8 +18,10 @@ namespace Backend.Common.AutoMapperCustomConfiguration
                 cfg.CreateMap<LineaFactura, VMLineaFactura>();
                 cfg.CreateMap<Presupuesto, VMPresupuesto>();
                 cfg.CreateMap<LineaPresupuesto, VMLineaPresupuesto>();
-                cfg.CreateMap<Pedido, VMPedido>();
+                cfg.CreateMap<Pedido, VMPedido>();            
                 cfg.CreateMap<LineaPedido, VMLineaPedido>();
+                cfg.CreateMap<Albaran, VMAlbaran>();
+                cfg.CreateMap<LineaAlbaran, VMLineaAlbaran>();
             });
 
             Mapper.Initialize(cfg =>
@@ -31,6 +33,8 @@ namespace Backend.Common.AutoMapperCustomConfiguration
                 cfg.CreateMap<LineaPresupuesto, VMLineaPresupuesto>();
                 cfg.CreateMap<Pedido, VMPedido>();
                 cfg.CreateMap<LineaPedido, VMLineaPedido>();
+                cfg.CreateMap<Albaran, VMAlbaran>();
+                cfg.CreateMap<LineaAlbaran, VMLineaAlbaran>();
             });
 
             IMapper mapper = config.CreateMapper();

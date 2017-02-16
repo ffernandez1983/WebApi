@@ -12,6 +12,8 @@ namespace RestTest.Controllers.v1
 
         public int ProveedorId { get; set; }
 
+        public int EmpresaId { get; set; }
+
         public decimal ImporteSubtotal { get; set; }
 
         public decimal Impuesto { get; set; }

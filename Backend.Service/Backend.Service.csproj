@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\Albaranes\IGetAlbaranesService.cs" />
+    <Compile Include="Contracts\Albaranes\IPostAlbaranesService.cs" />
     <Compile Include="Contracts\Clientes\IPutClientesService.cs" />
     <Compile Include="Contracts\Clientes\IPostClientesService.cs" />
     <Compile Include="Contracts\Clientes\IGetClientesService.cs" />
@@ -65,6 +67,8 @@
     <Compile Include="Contracts\Proveedores\IPostProveedoresService.cs" />
     <Compile Include="Contracts\Proveedores\IPutProveedoresService.cs" />
     <Compile Include="CustomResponses\HttpResponse.cs" />
+    <Compile Include="Services\Albaranes\GetAlbaranesService.cs" />
+    <Compile Include="Services\Albaranes\PostAlbaranesService.cs" />
     <Compile Include="Services\Clientes\PutClientesService.cs" />
     <Compile Include="Services\Clientes\PostClientesService.cs" />
     <Compile Include="Services\Clientes\GetClientesService.cs" />

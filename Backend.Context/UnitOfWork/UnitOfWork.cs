@@ -13,6 +13,8 @@ namespace Backend.Context
         {
 
         }
+        public virtual IDbSet<Empresa> Empresas { get; set; }
+
         public virtual IDbSet<Cliente> Clientes { get; set; }
         public virtual IDbSet<Proveedor> Proveedores { get; set; }
 
