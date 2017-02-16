@@ -1,42 +1,41 @@
-﻿using Backend.Entities;
-using Backend.Entities.DatosCliente;
+﻿using AutoMapper;
+using Backend.Entities.Productos;
+using Backend.Service;
 using Backend.Service.Contracts;
 using Backend.WebAPI.Common.Routing;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
-using System.Net.Mail;
 using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace RestTest.Controllers.v1
 {
-    //[ApiVersion1RoutePrefix("Clientes")]
-    //public class PutClientesController : ApiController
-    //{
-    //    private readonly IPutClientesService _clientesService = null;
+    [ApiVersion1RoutePrefix("Productos")]
+    public class PutProductosController : ApiController
+    {
+        private readonly IPutProductosService _productosService = null;
 
-    //    public PutClientesController(IPutClientesService clientesService)
-    //    {
-    //        if(clientesService == null)
-    //        {
-    //            throw new ArgumentNullException("clientesService");
-    //        }
-    //        _clientesService = clientesService;
-    //    }
+        public PutProductosController(IPutProductosService productosService)
+        {
+            if (productosService == null)
+            {
+                throw new ArgumentNullException("productosService");
+            }
+            _productosService = productosService;
+        }
 
-    //    /// <summary>
-    //    /// Prueba de comuncacion
-    //    /// </summary>
-    //    /// <returns>OK</returns>
-    //    [Route("PruebaPut", Name = "PutPruebaV1")]
-    //    public bool GetPrueba()
-    //    {
-    //        return true;
-    //    }
+        /// <summary>
+        /// Actualiza el producto
+        /// </summary>
+        /// <returns>OK</returns>
+        [Route("Actualiza", Name = "")]
+        public async Task<HttpResponseMessage> PutProductoAsync([FromBody] VMProducto newProducto, int idProducto)
+        {
+            var oldProducto = Mapper.Map<VMProducto, Producto>(newProducto);
+            HttpResponse<Producto> status = await _productosService.PutProductoAsync(oldProducto, idProducto);
+            return Request.CreateResponse(status.Status, status.Entity);
+        }
 
-
+    }
 }
 

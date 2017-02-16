@@ -1,15 +1,10 @@
-﻿using Backend.Entities;
-using Backend.Entities.DatosCliente;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Backend.Entities.DatosCliente;
 using System.Threading.Tasks;
 
 namespace Backend.Service.Contracts
 {
     public interface IPutClientesService
     {
-        
+        Task<HttpResponse<Cliente>> PutClienteAsync(Cliente cliente, int idCliente);
     }
 }

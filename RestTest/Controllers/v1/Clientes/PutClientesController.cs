@@ -1,5 +1,7 @@
-﻿using Backend.Entities;
+﻿using AutoMapper;
+using Backend.Entities;
 using Backend.Entities.DatosCliente;
+using Backend.Service;
 using Backend.Service.Contracts;
 using Backend.WebAPI.Common.Routing;
 using System;
@@ -28,16 +30,20 @@ namespace RestTest.Controllers.v1
         }
 
         /// <summary>
-        /// Prueba de comuncacion
+        /// Actualiza el cliente
         /// </summary>
         /// <returns>OK</returns>
-        [Route("Actualiza", Name = "PutPruebaV1")]
-        public bool GetPrueba()
+        [Route("Actualiza", Name = "PutClienteV1")]
+        public async Task<HttpResponseMessage> PutClienteAsync([FromBody] VMCliente newCliente, int idCliente)
         {
-            return true;
+            var oldCliente = Mapper.Map<VMCliente, Cliente>(newCliente);
+
+
+            HttpResponse<Cliente> status = await _clientesService.PutClienteAsync(oldCliente, idCliente);
+            return Request.CreateResponse(status.Status, status.Entity);
         }
 
-     
+
 
     }
 }

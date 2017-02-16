@@ -36,9 +36,8 @@ namespace RestTest.Controllers.v1
         /// <returns>OK, Conflict</returns>
         [Route("Nuevo", Name = "PostClienteV1")]
         public async Task<HttpResponseMessage> PostClienteAsync([FromBody] VMCliente newCliente)
-        {
-            Cliente oldCliente = new Cliente();
-            oldCliente.Nombre = newCliente.Nombre;
+        {          
+            var oldCliente = Mapper.Map<VMCliente, Cliente>(newCliente);
 
             HttpResponse<Cliente> status = await _clientesService.PostClienteAsync(oldCliente);
             return Request.CreateResponse(status.Status, status.Entity);
