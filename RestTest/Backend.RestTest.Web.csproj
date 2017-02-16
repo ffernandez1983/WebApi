@@ -263,6 +263,7 @@
     <Compile Include="Controllers\v1\Clientes\GetClientesController.cs" />
     <Compile Include="Controllers\v1\Clientes\PostClientesController.cs" />
     <Compile Include="Controllers\v1\Clientes\PutClientesController.cs" />
+    <Compile Include="Controllers\v1\Pedidos\PostPedidosController.cs" />
     <Compile Include="Controllers\v1\Presupuestos\PostPresupuestosController.cs" />
     <Compile Include="Controllers\v1\Productos\GetProductosController.cs" />
     <Compile Include="Controllers\v1\Productos\PostProductosController.cs" />
