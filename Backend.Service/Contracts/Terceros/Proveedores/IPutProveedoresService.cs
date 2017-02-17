@@ -10,6 +10,6 @@ namespace Backend.Service.Contracts
 {
     public interface IPutProveedoresService
     {
-        
+        Task<HttpResponse<Proveedor>> PutProveedorAsync(Proveedor proveedor, int idProveedor);
     }
 }
