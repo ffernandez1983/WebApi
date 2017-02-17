@@ -7,6 +7,14 @@ namespace Backend.Entities.DatosCliente
 {
     public class Empresa
     {
+        public Empresa()
+        {
+            Presupuestos = new HashSet<Presupuesto>();
+            Pedidos = new HashSet<Pedido>();
+            Facturas = new HashSet<Factura>();
+            Albaranes = new HashSet<Albaran>();
+        }
+
         [Key]
         public int IDEmpresa { get; set; }       
 
