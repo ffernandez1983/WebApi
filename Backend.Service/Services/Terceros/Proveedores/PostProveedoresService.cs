@@ -4,6 +4,7 @@ using System;
 using Backend.Entities.DatosCliente;
 using System.Threading.Tasks;
 using System.Net;
+using Backend.Entities.DatosProveedor;
 
 namespace Backend.Service
 {

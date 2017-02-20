@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Contracts\Documentos\Albaranes\IGetAlbaranesService.cs" />
     <Compile Include="Contracts\Documentos\Albaranes\IPostAlbaranesService.cs" />
+    <Compile Include="Contracts\Empresa\IGetEmpresaService.cs" />
     <Compile Include="Contracts\Productos\IDeleteProductosService.cs" />
     <Compile Include="Contracts\Terceros\Clientes\IDeleteClientesService.cs" />
     <Compile Include="Contracts\Terceros\Clientes\IPutClientesService.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="CustomResponses\HttpResponse.cs" />
     <Compile Include="Services\Documentos\Albaranes\GetAlbaranesService.cs" />
     <Compile Include="Services\Documentos\Albaranes\PostAlbaranesService.cs" />
+    <Compile Include="Services\Empresa\GetEmpresaService.cs" />
     <Compile Include="Services\Productos\DeleteProductosService.cs" />
     <Compile Include="Services\Terceros\Clientes\DeleteClientesService.cs" />
     <Compile Include="Services\Terceros\Clientes\PutClientesService.cs" />

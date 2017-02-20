@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Backend.Entities.DatosCliente
+namespace Backend.Entities.DatosEmpresa
 {
     public class Empresa
     {

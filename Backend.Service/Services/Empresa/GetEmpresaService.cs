@@ -1,5 +1,6 @@
 ﻿using Backend.Context;
-using Backend.Entities.DatosProveedor;
+using Backend.Entities.DatosEmpresa;
+using Backend.Service;
 using Backend.Service.Contracts;
 using System;
 using System.Collections.Generic;
@@ -9,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace Backend.Service
 {
-    public class GetProveedoresService: IGetProveedoresService
+    public class GetEmpresaService : IGetEmpresaService
 
     {
-        public GetProveedoresService(IUnitOfWork database)
+        public GetEmpresaService(IUnitOfWork database)
         {
             if (database == null)
             {
@@ -22,9 +23,9 @@ namespace Backend.Service
         }
         private readonly IUnitOfWork ctx = null;
 
-        public async Task<List<Proveedor>> GetTodosProveedores()
+        public async Task<List<Empresa>> GetDatosEmpresa()
         {
-            var query = await (from cl in ctx.Proveedores
+            var query = await (from cl in ctx.Empresas
                         select cl).ToListAsync();
             return query;
         }

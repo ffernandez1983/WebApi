@@ -1,5 +1,6 @@
 ﻿using Backend.Entities;
 using Backend.Entities.DatosCliente;
+using Backend.Entities.DatosProveedor;
 using System;
 using System.Collections.Generic;
 using System.Linq;

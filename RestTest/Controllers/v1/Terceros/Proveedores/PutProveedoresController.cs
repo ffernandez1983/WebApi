@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Backend.Entities.DatosCliente;
+using Backend.Entities.DatosProveedor;
 using Backend.Service;
 using Backend.Service.Contracts;
 using Backend.WebAPI.Common.Routing;

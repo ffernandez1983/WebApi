@@ -1,4 +1,6 @@
 ﻿using Backend.Entities.DatosCliente;
+using Backend.Entities.DatosEmpresa;
+using Backend.Entities.DatosProveedor;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

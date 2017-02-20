@@ -262,6 +262,9 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\v1\Documentos\Albaranes\GetAlbaranesController.cs" />
     <Compile Include="Controllers\v1\Documentos\Albaranes\PostAlbaranesController.cs" />
+    <Compile Include="Controllers\v1\Empresa\GetEmpresaController.cs" />
+    <Compile Include="Controllers\v1\Empresa\PostEmpresaController.cs" />
+    <Compile Include="Controllers\v1\Empresa\PutEmpresaController.cs" />
     <Compile Include="Controllers\v1\Productos\DeleteProductosController.cs" />
     <Compile Include="Controllers\v1\Terceros\Clientes\GetClientesController.cs" />
     <Compile Include="Controllers\v1\Terceros\Clientes\PostClientesController.cs" />

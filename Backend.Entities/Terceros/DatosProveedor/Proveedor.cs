@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Backend.Entities.DatosCliente
+namespace Backend.Entities.DatosProveedor
 {
     public class Proveedor
     {

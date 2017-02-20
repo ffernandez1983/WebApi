@@ -1,5 +1,5 @@
 ﻿using Backend.Context;
-using Backend.Entities.DatosCliente;
+using Backend.Entities.DatosProveedor;
 using Backend.Service.Contracts;
 using System;
 using System.Data.Entity;
