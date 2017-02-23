@@ -1,10 +1,11 @@
-﻿using Backend.Entities.Facturacion;
+﻿using Backend.Entities.DatosEmpresa;
+using Backend.Entities.Facturacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Backend.Entities.DatosEmpresa
+namespace Backend.Entities.DatosUsuario
 {
     public class Usuario
     {
@@ -18,6 +19,12 @@ namespace Backend.Entities.DatosEmpresa
         public int IDUsuario { get; set; }       
 
         public string DNI { get; set; }
+
+        public string Nombre { get; set; }
+
+        public string Apellido1 { get; set; }
+
+        public string Apellido2 { get; set; }
 
         public string Direccion { get; set; }
 

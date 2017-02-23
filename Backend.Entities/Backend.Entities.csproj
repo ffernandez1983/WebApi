@@ -67,6 +67,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Terceros\DatosProveedor\ViewModels\VMProveedor.cs" />
     <Compile Include="Usuario\Usuario.cs" />
+    <Compile Include="Usuario\ViewModels\VMUsuario.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

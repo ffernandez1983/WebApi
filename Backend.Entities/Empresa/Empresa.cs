@@ -1,4 +1,5 @@
-﻿using Backend.Entities.Facturacion;
+﻿using Backend.Entities.DatosUsuario;
+using Backend.Entities.Facturacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

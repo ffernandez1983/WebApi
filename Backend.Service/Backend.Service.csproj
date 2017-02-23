@@ -72,9 +72,15 @@
     <Compile Include="Contracts\Terceros\Proveedores\IPostProveedoresService.cs" />
     <Compile Include="Contracts\Terceros\Proveedores\IDeleteProveedoresService.cs" />
     <Compile Include="Contracts\Terceros\Proveedores\IPutProveedoresService.cs" />
+    <Compile Include="Contracts\Usuario\IGetUsuarioService.cs" />
+    <Compile Include="Contracts\Usuario\IPostUsuarioService.cs" />
+    <Compile Include="Contracts\Usuario\IPutUsuarioService.cs" />
     <Compile Include="CustomResponses\HttpResponse.cs" />
     <Compile Include="Services\Documentos\Albaranes\GetAlbaranesService.cs" />
     <Compile Include="Services\Documentos\Albaranes\PostAlbaranesService.cs" />
+    <Compile Include="Services\Usuario\GetUsuarioService.cs" />
+    <Compile Include="Services\Usuario\PostUsuarioService.cs" />
+    <Compile Include="Services\Usuario\PutUSuarioService.cs" />
     <Compile Include="Services\Empresa\GetEmpresaService.cs" />
     <Compile Include="Services\Empresa\PostEmpresaService.cs" />
     <Compile Include="Services\Empresa\PutEmpresaService.cs" />

@@ -1,6 +1,7 @@
 ﻿using Backend.Entities.DatosCliente;
 using Backend.Entities.DatosEmpresa;
 using Backend.Entities.DatosProveedor;
+using Backend.Entities.DatosUsuario;
 using Backend.Entities.Facturacion;
 using Backend.Entities.Productos;
 using System.Data.Entity;
