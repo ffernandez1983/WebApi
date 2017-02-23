@@ -12,6 +12,8 @@ namespace Backend.Context
     {
         IDbSet<Empresa> Empresas { get; set; }
 
+        IDbSet<Usuario> Usuarios { get; set; }
+
         IDbSet<Cliente> Clientes { get; set; }
         IDbSet<Proveedor> Proveedores { get; set; }
 

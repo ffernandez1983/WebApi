@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Backend.Entities.DatosEmpresa
 {
@@ -15,8 +16,13 @@ namespace Backend.Entities.DatosEmpresa
             Albaranes = new HashSet<Albaran>();
         }
 
-        [Key]
-        public int IDEmpresa { get; set; }       
+        [Key] 
+        [Column("IDEmpresa", Order=0)]
+        public int IDEmpresa { get; set; }
+
+        [ForeignKey("Usuario")]
+        public int UsuarioId { get; set; }
+        public Usuario Usuario { get; set; }
 
         public string CIF { get; set; }
 
@@ -38,7 +44,7 @@ namespace Backend.Entities.DatosEmpresa
 
         public string DNI { get; set; }
 
-        public DateTime FechaNacimiento { get; set; } 
+        public DateTime FechaNacimiento { get; set; }            
 
         public virtual ICollection<Factura> Facturas { get; set; }
         public virtual ICollection<Presupuesto> Presupuestos { get; set; }

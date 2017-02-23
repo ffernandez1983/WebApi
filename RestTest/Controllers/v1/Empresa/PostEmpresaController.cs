@@ -1,5 +1,4 @@
-﻿using Backend.Entities.DatosCliente;
-using Backend.Entities.Productos;
+﻿using Backend.Entities.DatosEmpresa;
 using Backend.Service;
 using Backend.Service.Contracts;
 using Backend.WebAPI.Common.Routing;
@@ -10,32 +9,32 @@ using System.Web.Http;
 
 namespace RestTest.Controllers.v1
 {
-    /*[ApiVersion1RoutePrefix("Productos")]
-    public class PostProductosController : ApiController
+    [ApiVersion1RoutePrefix("Empresa")]
+    public class PostEmpresaController : ApiController
     {
-        private readonly IPostProductosService _productosService = null;
+        private readonly IPostEmpresaService _empresasService = null;
 
-        public PostProductosController(IPostProductosService productosService)
+        public PostEmpresaController(IPostEmpresaService empresasService)
         {
-            if (productosService == null)
+            if (empresasService == null)
             {
-                throw new ArgumentNullException("clientesService");
+                throw new ArgumentNullException("empresasService");
             }
-            _productosService = productosService;
+            _empresasService = empresasService;
         }
 
         /// <summary>
         /// Dar de alta un proveedor
         /// </summary>
         /// <returns>OK, Conflict</returns>
-        [Route("Nuevo", Name = "PostProductoV1")]
-        public async Task<HttpResponseMessage> PostProductoAsync([FromBody] VMProducto newProducto)
+        [Route("Nueva", Name = "PostEmpresaV1")]
+        public async Task<HttpResponseMessage> PostEmpresaAsync([FromBody] VMEmpresa newEmpresa)
         {
-            Producto oldProducto = new Producto();
-            oldProducto.Nombre = newProducto.Nombre;
+            Empresa oldEmpresa = new Empresa();
+            oldEmpresa.Nombre = newEmpresa.Nombre;
 
-            HttpResponse<Producto> status = await _productosService.PostProductoAsync(oldProducto);
+            HttpResponse<Empresa> status = await _empresasService.PostEmpresaAsync(oldEmpresa);
             return Request.CreateResponse(status.Status, status.Entity);
         }
-    }*/
+    }
 }

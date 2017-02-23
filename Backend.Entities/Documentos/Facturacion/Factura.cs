@@ -36,6 +36,10 @@ namespace Backend.Entities.Facturacion
         public int EmpresaId { get; set; }
         public Empresa Empresa { get; set; }
 
+        [ForeignKey("Usuario")]
+        public int UsuarioId { get; set; }
+        public Empresa Usuario { get; set; }
+
         // Importes
         public decimal ImporteSubtotal { get; set; }
 

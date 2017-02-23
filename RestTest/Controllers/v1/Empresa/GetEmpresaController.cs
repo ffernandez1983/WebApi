@@ -18,7 +18,7 @@ namespace RestTest.Controllers.v1
         {
             if (empresasService == null)
             {
-                throw new ArgumentNullException("proveedoresService");
+                throw new ArgumentNullException("empresasService");
             }
             _empresasService = empresasService;
         }

@@ -278,6 +278,7 @@
     <Compile Include="Controllers\v1\Productos\GetProductosController.cs" />
     <Compile Include="Controllers\v1\Productos\PostProductosController.cs" />
     <Compile Include="Controllers\v1\Productos\PutProductosController.cs" />
+    <Compile Include="Controllers\v1\Terceros\Proveedores\DeleteProveedoresController.cs" />
     <Compile Include="Controllers\v1\Terceros\Proveedores\PutProveedoresController.cs" />
     <Compile Include="Controllers\v1\Terceros\Proveedores\PostProveedoresController.cs" />
     <Compile Include="Controllers\v1\Terceros\Proveedores\GetProveedoresController.cs" />

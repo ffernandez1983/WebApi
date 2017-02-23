@@ -35,7 +35,7 @@ namespace Backend.Entities.Facturacion
 
         [ForeignKey("Empresa")]
         public int EmpresaId { get; set; }
-        public Empresa Empresa { get; set; }
+        public Empresa Empresa { get; set; }        
 
         //Importes
         public decimal ImporteSubtotal { get; set; }

@@ -52,6 +52,8 @@
     <Compile Include="Contracts\Documentos\Albaranes\IGetAlbaranesService.cs" />
     <Compile Include="Contracts\Documentos\Albaranes\IPostAlbaranesService.cs" />
     <Compile Include="Contracts\Empresa\IGetEmpresaService.cs" />
+    <Compile Include="Contracts\Empresa\IPostEmpresaService.cs" />
+    <Compile Include="Contracts\Empresa\IPutEmpresaService.cs" />
     <Compile Include="Contracts\Productos\IDeleteProductosService.cs" />
     <Compile Include="Contracts\Terceros\Clientes\IDeleteClientesService.cs" />
     <Compile Include="Contracts\Terceros\Clientes\IPutClientesService.cs" />
@@ -68,11 +70,14 @@
     <Compile Include="Contracts\Productos\IPutProductosService.cs" />
     <Compile Include="Contracts\Terceros\Proveedores\IGetProveedoresService.cs" />
     <Compile Include="Contracts\Terceros\Proveedores\IPostProveedoresService.cs" />
+    <Compile Include="Contracts\Terceros\Proveedores\IDeleteProveedoresService.cs" />
     <Compile Include="Contracts\Terceros\Proveedores\IPutProveedoresService.cs" />
     <Compile Include="CustomResponses\HttpResponse.cs" />
     <Compile Include="Services\Documentos\Albaranes\GetAlbaranesService.cs" />
     <Compile Include="Services\Documentos\Albaranes\PostAlbaranesService.cs" />
     <Compile Include="Services\Empresa\GetEmpresaService.cs" />
+    <Compile Include="Services\Empresa\PostEmpresaService.cs" />
+    <Compile Include="Services\Empresa\PutEmpresaService.cs" />
     <Compile Include="Services\Productos\DeleteProductosService.cs" />
     <Compile Include="Services\Terceros\Clientes\DeleteClientesService.cs" />
     <Compile Include="Services\Terceros\Clientes\PutClientesService.cs" />
@@ -88,6 +93,7 @@
     <Compile Include="Services\Productos\GetProductosService.cs" />
     <Compile Include="Services\Productos\PostProductosService.cs" />
     <Compile Include="Services\Productos\PutProductosService.cs" />
+    <Compile Include="Services\Terceros\Proveedores\DeleteProveedoresService.cs" />
     <Compile Include="Services\Terceros\Proveedores\GetProveedoresService.cs" />
     <Compile Include="Services\Terceros\Proveedores\PostProveedoresService.cs" />
     <Compile Include="Services\Terceros\Proveedores\PutProveedoresService.cs" />

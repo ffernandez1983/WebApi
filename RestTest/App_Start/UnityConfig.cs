@@ -47,7 +47,18 @@ namespace RestTest
                new PerRequestLifetimeManager()
            );
 
+            //Empresa
+            UnityConfig.container.RegisterType<IGetEmpresaService, GetEmpresaService>(
+                new PerRequestLifetimeManager()
+            );
 
+            UnityConfig.container.RegisterType<IPostEmpresaService, PostEmpresasService>(
+               new PerRequestLifetimeManager()
+           );
+            UnityConfig.container.RegisterType<IPutEmpresaService, PutEmpresaService>(
+              new PerRequestLifetimeManager()
+          );
+            
             //Clientes
             UnityConfig.container.RegisterType<IGetClientesService, GetClientesService>(
                 new PerRequestLifetimeManager()
@@ -76,7 +87,10 @@ namespace RestTest
 
             UnityConfig.container.RegisterType<IPutProveedoresService, PutProveedoresService>(
               new PerRequestLifetimeManager()
-           );
+            );
+            UnityConfig.container.RegisterType<IDeleteProveedoresService, DeleteProveedoresService>(
+           new PerRequestLifetimeManager()
+            );
 
 
             //Facturas
@@ -124,7 +138,7 @@ namespace RestTest
               new PerRequestLifetimeManager()
            );
 
-            //Pedidos
+            //Albaranes
             UnityConfig.container.RegisterType<IPostAlbaranesService, PostAlbaranesService>(
                new PerRequestLifetimeManager()
             );
