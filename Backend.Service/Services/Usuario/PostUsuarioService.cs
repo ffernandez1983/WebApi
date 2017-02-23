@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Backend.Service
 {
-    public class PostUsuariosService : IPostUsuarioService
+    public class PostUsuarioService : IPostUsuarioService
 
     {
-        public PostUsuariosService(IUnitOfWork database)
+        public PostUsuarioService(IUnitOfWork database)
         {
             if (database == null)
             {

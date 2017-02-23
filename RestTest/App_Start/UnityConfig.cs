@@ -58,7 +58,19 @@ namespace RestTest
             UnityConfig.container.RegisterType<IPutEmpresaService, PutEmpresaService>(
               new PerRequestLifetimeManager()
           );
-            
+
+            //Usuario
+            UnityConfig.container.RegisterType<IGetUsuarioService, GetUsuarioService>(
+                new PerRequestLifetimeManager()
+            );
+
+            UnityConfig.container.RegisterType<IPostUsuarioService, PostUsuarioService>(
+               new PerRequestLifetimeManager()
+           );
+            UnityConfig.container.RegisterType<IPutUsuarioService, PutUsuarioService>(
+              new PerRequestLifetimeManager()
+          );
+
             //Clientes
             UnityConfig.container.RegisterType<IGetClientesService, GetClientesService>(
                 new PerRequestLifetimeManager()
