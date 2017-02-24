@@ -6,6 +6,7 @@ namespace Backend.Service.Contracts
 {
     public interface IGetUsuarioService
     {
-        Task<List<Usuario>> GetDatosUsuario();
+        Task<List<Usuario>> GetTodosUsuarios();
+        Task<Usuario> GetDatosUsuario(int idUsuario);
     }
 }

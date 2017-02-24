@@ -24,13 +24,24 @@ namespace RestTest.Controllers.v1
         }
 
         /// <summary>
+        /// Obtenemos todos los usuarios
+        /// </summary>
+        /// <returns>Lista de usuarios</returns>
+        [Route("Todos", Name = "GetUsuariosV1")]
+        public async Task<List<Usuario>> GetTodosUsuarios()
+        {
+            return await _usuariosService.GetTodosUsuarios();
+        }
+
+        /// <summary>
         /// Obtenemos todos los proveedores
         /// </summary>
-        /// <returns>Lista de clientes</returns>
-        [Route("Todos", Name = "GetUsuarioV1")]
-        public async Task<List<Usuario>> GetDatosUsuario()
+        /// <param name="idUsuario">id del usuario</param>
+        /// <returns>Datos de un usuario</returns>
+        [Route("Usuario", Name = "GetDatosUsuarioV1")]
+        public async Task<Usuario> GetDatosUsuario(int idUsuario)
         {
-            return await _usuariosService.GetDatosUsuario();
+            return await _usuariosService.GetDatosUsuario(idUsuario);
         }
 
     }

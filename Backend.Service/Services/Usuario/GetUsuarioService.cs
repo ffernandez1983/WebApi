@@ -23,10 +23,18 @@ namespace Backend.Service
         }
         private readonly IUnitOfWork ctx = null;
 
-        public async Task<List<Usuario>> GetDatosUsuario()
+        public async Task<List<Usuario>> GetTodosUsuarios()
         {
             var query = await (from cl in ctx.Usuarios
                         select cl).ToListAsync();
+            return query;
+        }
+
+        public async Task<Usuario> GetDatosUsuario(int idUsuario)
+        {
+            var query = await (from cl in ctx.Usuarios
+                               where cl.IDUsuario == idUsuario
+                               select cl).SingleOrDefaultAsync();
             return query;
         }
     }
