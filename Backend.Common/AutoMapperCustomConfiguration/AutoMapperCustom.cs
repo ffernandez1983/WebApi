@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Backend.Entities.DatosUsuario;
 using Backend.Entities.Facturacion;
 using RestTest.Controllers.v1;
 
@@ -15,6 +16,7 @@ namespace Backend.Common.AutoMapperCustomConfiguration
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Factura, VMFactura>();
+                cfg.CreateMap<Usuario, VMUsuario>();
                 cfg.CreateMap<LineaFactura, VMLineaFactura>();
                 cfg.CreateMap<Presupuesto, VMPresupuesto>();
                 cfg.CreateMap<LineaPresupuesto, VMLineaPresupuesto>();
@@ -28,6 +30,7 @@ namespace Backend.Common.AutoMapperCustomConfiguration
             {
                 cfg.CreateMissingTypeMaps = true;
                 cfg.CreateMap<Factura, VMFactura>();
+                cfg.CreateMap<Usuario, VMUsuario>();
                 cfg.CreateMap<LineaFactura, VMLineaFactura>();
                 cfg.CreateMap<Presupuesto, VMPresupuesto>();
                 cfg.CreateMap<LineaPresupuesto, VMLineaPresupuesto>();

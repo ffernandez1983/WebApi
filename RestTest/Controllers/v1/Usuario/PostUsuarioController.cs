@@ -1,4 +1,6 @@
-﻿using Backend.Entities.DatosUsuario;
+﻿using AutoMapper;
+using Backend.Common.AutoMapperCustomConfiguration;
+using Backend.Entities.DatosUsuario;
 using Backend.Service;
 using Backend.Service.Contracts;
 using Backend.WebAPI.Common.Routing;
@@ -13,27 +15,36 @@ namespace RestTest.Controllers.v1
     public class PostUsuarioController : ApiController
     {
         private readonly IPostUsuarioService _usuariosService = null;
+        private readonly IAutoMapperCustom _autoMapperCustom = null;
 
-        public PostUsuarioController(IPostUsuarioService usuariosService)
+        public PostUsuarioController(IPostUsuarioService usuariosService, IAutoMapperCustom autoMapperCustom)
         {
             if (usuariosService == null)
             {
                 throw new ArgumentNullException("usuariosService");
             }
+            if (autoMapperCustom == null)
+            {
+                throw new ArgumentNullException("autoMapperCustom");
+            }
             _usuariosService = usuariosService;
+            _autoMapperCustom = autoMapperCustom;
         }
 
         /// <summary>
         /// Dar de alta un proveedor
         /// </summary>
         /// <returns>OK, Conflict</returns>
-        [Route("Nueva", Name = "PostUsuarioV1")]
+        [Route("Nuevo", Name = "PostUsuarioV1")]
         public async Task<HttpResponseMessage> PostUsuarioAsync([FromBody] VMUsuario newUsuario)
         {
-            Usuario oldUsuario = new Usuario();
-            oldUsuario.Nombre = newUsuario.Nombre;
+            _autoMapperCustom.InicilizarMapper();
+            var oldUsuario = new Usuario();
 
-            HttpResponse<Usuario> status = await _usuariosService.PostUsuarioAsync(oldUsuario);
+            var copiaUsuario = Mapper.Map<VMUsuario, Usuario>(newUsuario);
+          
+
+            HttpResponse<Usuario> status = await _usuariosService.PostUsuarioAsync(copiaUsuario);
             return Request.CreateResponse(status.Status, status.Entity);
         }
     }
