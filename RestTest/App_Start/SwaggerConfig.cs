@@ -3,6 +3,9 @@ using WebActivatorEx;
 using RestTest;
 using Swashbuckle.Application;
 using System.Reflection;
+using System;
+using System.Net.Http;
+using System.Linq;
 
 namespace RestTest
 {
@@ -17,7 +20,7 @@ namespace RestTest
             httpConfiguration
                    .EnableSwagger(c =>
                     {
-                      
+                        c.RootUrl(req => SwaggerConfig.GetRootUrlFromRequest(req));
                         c.SingleApiVersion("v1", "WebApi de RestTest")
                          .Description("Ayuda de la API de RestTest");
 
@@ -26,6 +29,10 @@ namespace RestTest
                     {
                         c.DisableValidator();
                     });
+        }
+         private static string GetRootUrlFromRequest(HttpRequestMessage req)
+        {
+            return String.Format(@"{0}/{1}", req.RequestUri.GetLeftPart(UriPartial.Authority), req.RequestUri.Segments.First(a => a != "/").Trim('/'));
         }
     }
 }

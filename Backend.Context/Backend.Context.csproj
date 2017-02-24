@@ -53,6 +53,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IUnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="Migrations\201702241213299_Inicial.cs" />
+    <Compile Include="Migrations\201702241213299_Inicial.Designer.cs">
+      <DependentUpon>201702241213299_Inicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UnitOfWork\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +77,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Migrations\DataMigrationsCommand.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201702241213299_Inicial.resx">
+      <DependentUpon>201702241213299_Inicial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

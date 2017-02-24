@@ -15,10 +15,13 @@ namespace Backend.Entities.Facturacion
         public Presupuesto()
         {
             Pedidos = new HashSet<Pedido>();
+            LineasPresupuesto = new HashSet<LineaPresupuesto>();
         }
 
         [Key]
+        [ForeignKey("Pedido")]
         public int IDPresupuesto { get; set; }
+        public Pedido Pedido { get; set; }
 
         public DateTime Fecha { get; set; }
 

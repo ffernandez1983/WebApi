@@ -14,10 +14,13 @@ namespace Backend.Entities.Facturacion
         public Factura()
         {
             Albaranes = new HashSet<Albaran>();
+            LineasFactura = new HashSet<LineaFactura>();
         }
 
         [Key]
+        [ForeignKey("Albaran")]
         public int IDFactura { get; set; }
+        public Albaran Albaran { get; set; }
 
         [Required]
         public int NumeroFactura { get; set; }
@@ -36,17 +39,14 @@ namespace Backend.Entities.Facturacion
         public int EmpresaId { get; set; }
         public Empresa Empresa { get; set; }
 
-        [ForeignKey("Usuario")]
-        public int UsuarioId { get; set; }
-        public Empresa Usuario { get; set; }
-
         // Importes
         public decimal ImporteSubtotal { get; set; }
 
         public decimal Impuesto { get; set; }
 
-     
-        //Otros Documentos
+
+        //Otros Documentos      
+
         public virtual ICollection<Albaran> Albaranes { get; set; }
 
         //Lineas de Factura

@@ -21,7 +21,9 @@ namespace Backend.Entities.Facturacion
         }
 
         [Key]
+        [ForeignKey("Presupuesto")]
         public int IDPedido { get; set; }
+        public Presupuesto Presupuesto { get; set; }
 
         public int NumeroPedido { get; set; }
 
